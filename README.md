@@ -138,7 +138,7 @@ Replicates the pipeline of Maiti et al. (2021):
 Run `FSVC/FSVM_notebook.ipynb`.
 
 <p align="center">
-  <img src="FSVC/eval_result_data/plots/fsvc_5_7_mean_functions.png" width="700" alt="Per-class mean spectra and class mean difference for SR 1005">
+  <img src="assets/fsvc_5_7_mean_functions.png" width="700" alt="Per-class mean spectra and class mean difference for SR 1005">
   <br>
   <em>Per-class mean functions and individual spectra for SR 1005 (1005 ± 15 cm⁻¹), H vs. PC modelling set. The lower panel shows the signed mean difference μ̂<sub>H</sub> − μ̂<sub>PC</sub>; regions shaded blue (red) indicate wavenumbers where healthy (prostate cancer) absorbance is higher on average.</em>
 </p>
@@ -150,7 +150,7 @@ Implements the framework of Xie & Ogden (2024) applied to breath spectroscopy:
 - Gaussian kernel bandwidth γ determined automatically via the `sigest` heuristic (kernlab)
 
 <p align="center">
-  <img src="FSVC/eval_result_data/plots/fsvc_5_7_eigenfunctions.png" width="750" alt="First K*=2 eigenfunctions and cumulative variance explained for SR 1005">
+  <img src="assets/fsvc_5_7_eigenfunctions.png" width="750" alt="First K*=2 eigenfunctions and cumulative variance explained for SR 1005">
   <br>
   <em>Left: first two FPCA eigenfunctions φ<sub>1</sub> (48.4% variance) and φ<sub>2</sub> (17.1% variance) for SR 1005, H vs. PC, τ* = 1. Right: per-component and cumulative proportion of variance explained (PVE); the red dashed line marks the selected K* = 2.</em>
 </p>
