@@ -1,6 +1,6 @@
 # Urogenital Cancer Classification from Breath IR Spectra
 
-**Master's Thesis project — Technische Universität München (TUM), Department of Mathematics.**
+**Master's Thesis project — Technische Universität München (TUM), Department of Biostatistics.**
 
 This repository contains the full implementation accompanying the thesis *"Functional Support Vector Machines for Disease Classification based on Infrared Spectroscopy"* (2025). The project replicates and extends [Maiti et al. 2021](https://doi.org/10.1021/acs.analchem.0c04761): binary classification of urogenital cancers from mid-infrared Fourier-transform breath spectroscopy using a classical SVM pipeline and a novel Functional SVM (FSVM) pipeline.
 
