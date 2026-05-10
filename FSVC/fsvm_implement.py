@@ -37,8 +37,8 @@ fpca.face scaling convention (Xiao et al. 2016):
   └────────────┴─────────────────────────────────────────────┴────────────────────────────────────────┘
 
 Kernel convention (sklearn vs paper):
-    Paper eq. 2.5: k(Â_i, Â_l) = exp(−γ‖Â_i − Â_l‖²)
-    sklearn SVC:   k(x, x')    = exp(−gamma‖x − x'‖²)
+    Paper eq. 2.5: k(Â_i, Â_l) = exp(−γ‖Â_i - Â_l‖²)
+    sklearn SVC:   k(x, x')    = exp(−gamma‖x - x'‖²)
     So: sklearn gamma = paper γ.  They are the same parameter.
 """
 

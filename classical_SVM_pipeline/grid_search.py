@@ -31,8 +31,8 @@ KEY FEATURES:
    - Polynomial degree (for poly kernel)
 
 3. Fixed parameters (based on paper context):
-   - class_weight='balanced' (handles class imbalance)
-   - probability=True (enables threshold optimization)
+   - class_weight='balanced' (handles class imbalance) -REMOVED
+   - probability=True (enables threshold optimization) -REMOVED
    - random_state=42 (reproducibility)
 
 USAGE EXAMPLE:
@@ -44,7 +44,7 @@ from hyperparameter_search import SVMHyperparameterSearch
 # X_train: shape (n_samples, n_spectral_points)
 # y_train: shape (n_samples,) - labels (0=healthy, 1=cancer)
 
-# Example: SR_1005 for 32 samples, 30 spectral points
+# Example: SR_1005 for 32 samples, 125 spectral points
 X_train = preprocessed_srs['SR_1005']  # (32, 30)
 y_train = labels  # (32,)
 

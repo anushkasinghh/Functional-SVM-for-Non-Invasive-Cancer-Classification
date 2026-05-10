@@ -1,26 +1,40 @@
-/ALLDataGross/
-/thesis/
-/InfoDump/
-/.vscode/
+# ── Python ────────────────────────────────────────────
 *.pyc
 __pycache__/
 .ipynb_checkpoints/
+
+# ── ML model files ────────────────────────────────────
 *.pt
 *.pth
-/notebooks/
-04_Methodology.tex
+
+# ── Data ──────────────────────────────────────────────
+/ALLDataGross/
+/data_processed/
 dataprocessedbreath_data.pkl
-pipeline_overview_compressed.svg
-/TableOfContents.md
-/FSVC/eval_result_data/
-/FSVC/plotting_helpers/
+
+# ── Generated outputs ─────────────────────────────────
+/src/figures/
+eval_result_data/
+# plotting_helpers/
+
+# ── Excluded project files ────────────────────────────
 /FSVC/FSVC.R
 /FSVC/fsvm_biostatistics.pdf
 /FSVC/FSVM_notebook.py
-/exploratory_notebooks/
-/classical_SVM_pipeline/eval_result_data/
-/classical_SVM_pipeline/plotting_helpers/
+/FSVC/compare_gamma_methods.py
 /classical_SVM_pipeline/eval_params.py
 /classical_SVM_pipeline/mait2021p381.pdf
 /classical_SVM_pipeline/plot_results.py
-/data_processed/
+
+# ── Docs & scratch ────────────────────────────────────
+/thesis/
+/InfoDump/
+/notebooks/
+/exploratory_notebooks/
+/TableOfContents.md
+04_Methodology.tex
+pipeline_overview_compressed.svg
+
+# ── IDE & OS ──────────────────────────────────────────
+/.vscode/
+.DS_Store

@@ -1,9 +1,22 @@
-numpy 
-pandas
-scipy
-matplotlib
-torch
-torchvision
-torchaudio
-umap-learn
-scikit-learn
+# Core scientific stack
+numpy==2.2.6
+pandas==2.3.2
+scipy==1.15.3
+
+# Machine learning
+scikit-learn==1.7.2
+
+# Visualisation
+matplotlib==3.10.5
+seaborn==0.13.2
+
+# Dimensionality reduction
+umap-learn==0.5.9.post2
+
+# Deep learning (baseline-invariant encoder)
+torch==2.8.0
+torchvision==0.23.0
+torchaudio==2.8.0
+
+# R bridge (required for FSVC — needs R + refund package installed separately)
+rpy2==3.6.4

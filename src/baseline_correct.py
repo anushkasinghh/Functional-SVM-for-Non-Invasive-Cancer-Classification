@@ -1,6 +1,9 @@
 import numpy as np
 
-def baseline_roy(x, y, norm_factor_i, ref_region=(2550, 2600), L=[990, 2140, 1150], H=[1020, 2205, 1400]):
+def baseline_roy(x, y, norm_factor_i, ref_region=(2550, 2600), 
+                                                #  L=[515,  990, 1035, 1115, 1155, 1175, 1188, 2155], #3rd order correction for each SR used in SVM model.                                                                                              
+                                                #  H=[545, 1020, 1065, 1145, 1185, 1205, 1218, 2185]): 
+                   L=[990, 2140, 1150], H=[1020, 2205, 1400]): # For other samples                    
     """
     Mimics the exact logic of the MATLAB 'Second order baseline correction' section.
     
@@ -46,14 +49,26 @@ def baseline_roy(x, y, norm_factor_i, ref_region=(2550, 2600), L=[990, 2140, 115
    # ── 3rd order: local tilt per segment ─────────────────────────
     y3 = y2.copy()              # initialized ONCE before the loop
 
+
     for i in range(len(L)):
-        limL = L[i]
-        limH = H[i]
-        mask = (x >= limL) & (x <= limH)
+        lo = L[i]
+        hi = H[i]
+        mask = (x >= lo) & (x <= hi)
         if not mask.any():
             print("Warning: Segment not found.")
-            return np.zeros_like(y1)
+            continue
+# BASELINE CORRECT PAPER IMPLEMENTATION: apply 2nd order correction to all SRs used in the downstream SVM pipelines. 
 
+        # x_seg = x[mask]
+        # y_seg_in = y2[mask]
+        # N_seg = len(x_seg)
+        # slope = (y_seg_in[-1] - y_seg_in[0]) / N_seg 
+        # trend = slope * np.arange(N_seg)[::-1]
+        # y3[mask] = y_seg_in - trend
+        
+
+# SUSMITA'S R CODE IMPLEMENTATION:
+    
         x_seg = x[mask]
         y_seg_in = y2[mask]
         
@@ -73,7 +88,9 @@ def baseline_roy(x, y, norm_factor_i, ref_region=(2550, 2600), L=[990, 2140, 115
         # scale_factor = 500 / norm_factor_i
         # y_seg_final = y_seg_shift * scale_factor
     
-        y3[mask] = y_seg_final
+        y3[mask] = y_seg_final        
+        
+
 
     return y3, y2, y1
 
