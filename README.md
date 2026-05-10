@@ -1,4 +1,4 @@
-# Urogenital Cancer Detection from Breath IR Spectra
+# Urogenital Cancer Classification from Breath IR Spectra
 
 **Master's Thesis project — Technische Universität München (TUM), Department of Mathematics.**
 
